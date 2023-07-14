@@ -1,0 +1,98 @@
+@import '../../shared/styles/styles.sass'
+
+:host
+  *
+    box-sizing: border-box
+    //line-height: 1.375rem;
+    font-size: 0.875rem
+    //text-transform: uppercase;
+    letter-spacing: 0.02em
+    background-color: #fff
+
+  .app-new
+    display: block
+    width: 50%
+    align-items: center
+    justify-content: center
+
+  input
+    overflow: visible
+    display: block
+    width: stretch
+    width: 100%
+    padding: 0.875rem 1.25rem 0.8125rem
+    height: 2.8125rem
+    background-color: $reto-white
+    background-clip: padding-box
+    color: $reto-darkgray
+    border: 0.0625rem solid $reto-mediumgray
+    border-radius: 0.1875rem
+    outline: none
+
+    &.left
+      padding: 0.875rem 3.25rem 0.8125rem
+
+    &.right
+      padding-right: 3.25rem
+
+  input:disabled,
+  input:disabled:hover
+    background-color: $reto-lightgray
+    border: 1px solid $reto-mediumgray
+    color: $reto-mediumdarkgray
+    cursor: auto
+
+  .input::placeholder
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $reto-mediumdarkgray
+    font-size: 0.875rem
+    opacity: 1
+    &:disabled
+      color: $reto-mediumdarkgray
+
+  .text-container
+    position: relative
+
+  .search
+    width: 24px
+    background-image: url('/assets/img/search.png')
+    background-repeat: no-repeat
+    position: absolute
+
+    &.pointer
+      cursor: pointer
+
+    &.right
+      right: 0
+      top: 13px
+      bottom: 0
+      margin: auto 0
+      padding-right: 20px
+      padding-left: 20px
+
+    &.left
+      top: 13px
+      bottom: 0
+      margin: auto 0
+      margin-left: 20px
+      padding-right: 20px
+      padding-left: 20px
+
+    &.disable
+      cursor: default
+
+  .input:-ms-input-placeholder,
+  .input::-ms-input-placeholder
+    /* Internet Explorer 10-11, Microsoft Edge */
+    color: $reto-mediumdarkgray
+    vertical-align: middle
+
+  .input::-ms-input-placeholder
+    /* Microsoft Edge */
+    color: $reto-mediumdarkgray
+
+  .error-text:not(:disabled)
+    border: 1px solid $reto-error
+
+  .lowercase
+    text-transform: none !important
